@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Herramienta de Procesos Administrativos | ARL SURA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{font-family:"Segoe UI",Arial,sans-serif;margin:0;background:#f4f7fb;color:#1f2937}
+    header{background:#fff;border-bottom:1px solid #e5e7eb;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px;color:#0033a0}
+    .brand img{height:38px}
+    nav a{margin-left:10px;padding:6px 14px;border-radius:20px;text-decoration:none;color:#0033a0;border:1px solid #dbeafe;background:#eff6ff;font-size:14px}
+    main{max-width:1100px;margin:24px auto;padding:0 16px 40px}
+    section{background:#fff;border-radius:12px;padding:24px;margin-bottom:24px;box-shadow:0 4px 10px rgba(0,0,0,.05)}
+    h1,h2{color:#0033a0;margin-top:0}
+    .search input{width:100%;padding:10px 12px;border-radius:8px;border:1px solid #d1d5db;margin-bottom:16px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+    .card{border:1px solid #e5e7eb;border-radius:10px;padding:16px;background:#f9fafb}
+    .card h4{margin:0 0 10px;font-size:15px}
+    .buttons a{display:inline-block;margin-right:6px;margin-top:6px;padding:6px 12px;border-radius:20px;font-size:13px;text-decoration:none;background:#2563eb;color:#fff}
+    .meeting{display:flex;justify-content:space-between;align-items:center;gap:12px;border:1px solid #e5e7eb;padding:16px;border-radius:10px;background:#f9fafb;margin-top:12px}
+    .meeting a{background:#2563eb;color:#fff;padding:8px 16px;border-radius:20px;text-decoration:none;font-weight:500;white-space:nowrap}
+    .whatsapp{background:#dcfce7;border:1px solid #86efac}
+    footer{text-align:center;font-size:13px;color:#6b7280;margin-top:32px}
+  </style>
+  <script>
+    function buscarInstructivos(){
+      let filtro=document.getElementById('buscador').value.toLowerCase();
+      document.querySelectorAll('.instructivo').forEach(item=>{
+        item.style.display=item.dataset.nombre.includes(filtro)?'block':'none';
+      });
+    }
+  </script>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <img src="https://www.sura.com/themes/custom/sura/images/logo-sura.svg" alt="SURA">
+    <div><strong>Portal de Procesos Administrativos</strong><br><small>Regional Norte · ARL SURA</small></div>
+  </div>
+  <nav>
+    <a href="#instructivos">Instructivos</a>
+    <a href="#charlas">Charlas virtuales</a>
+    <a href="#contacto">Acompañamiento</a>
+  </nav>
+</header>
+<main>
+<section>
+  <h1>Herramienta de Procesos Administrativos</h1>
+  <p>En este portal encontrarás los principales recursos de apoyo operativo. Aquí podrás consultar instructivos, acceder a charlas virtuales de acompañamiento y formación, y disponer de un canal para solicitar acompañamiento.</p>
+</section>
+<section id="instructivos">
+  <h2>1. Instructivos</h2>
+  <div class="search"><input id="buscador" type="text" placeholder="Buscar instructivo por nombre..." onkeyup="buscarInstructivos()"></div>
+  <div class="grid">
+    <div class="card instructivo" data-nombre="documento trabajador">
+      <h4>Cómo actualizo el documento de un trabajador</h4>
+      <div class="buttons">
+        <a href="https://1drv.ms/b/c/5a6827323876633c/IQAICdt3q1hlQZckzBkfZqUeAS3cHpuYMfeS_wiGffwMqaY?e=NvnRFj" target="_blank">Previsualizar</a>
+        <a href="https://1drv.ms/b/c/5a6827323876633c/IQAICdt3q1hlQZckzBkfZqUeAS3cHpuYMfeS_wiGffwMqaY?e=NvnRFj" target="_blank">Descargar</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="charlas">
+  <h2>2. Charlas virtuales (Microsoft Teams)</h2>
+  <div class="meeting">
+    <div><strong>Mesa de Apoyo Procesos Administrativos</strong><br>Lunes, miércoles y viernes · 8:00 a 9:00 a.m.<br>Micrófono abierto donde las empresas pueden elevar inquietudes en mora e inexactitudes.</div>
+    <a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_OGQwMWIwZDItNDczOC00NjZjLTlhNzQtM2Q5MjQ5NTA5MDYw%40thread.v2/0?context=%7b%22Tid%22%3a%223c0bd4fe-1111-4d13-8e0c-7c33b9eb7581%22%2c%22Oid%22%3a%22b101dd91-b493-49aa-bc49-4837337cce76%22%7d" target="_blank">Unirse</a>
+  </div>
+</section>
+<section id="contacto">
+  <h2>3. Solicitud de Acompañamiento Procesos Administrativos</h2>
+  <p>Diligencia este formulario para solicitar apoyo en procesos administrativos.</p>
+  <a class="buttons" href="https://forms.office.com/r/cBBVEayL07" target="_blank">Ir al formulario</a>
+</section>
+<section class="whatsapp">
+  <h2>Atención para errores de clave</h2>
+  <p>Soporte para problemas de acceso a la plataforma:</p>
+  <p><strong>📱 WhatsApp: +57 315 275 7888</strong></p>
+</section>
+<footer>ARL SURA · Regional Norte · Portal de Procesos Administrativos</footer>
+</main>
+</body>
+</html>
